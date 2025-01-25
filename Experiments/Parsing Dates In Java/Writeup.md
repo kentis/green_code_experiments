@@ -1,4 +1,4 @@
-# Parsing Dates in Java: Which was is faster?
+# Parsing Dates in Java: Which way is faster?
 
 For computers, dates can be really tricky things in a myriad of ways. One of these ways 
 is when trying to read text and turn it into something that the software can even realize is a date.
