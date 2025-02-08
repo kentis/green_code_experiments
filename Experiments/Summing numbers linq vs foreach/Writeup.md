@@ -26,7 +26,11 @@ The results for running the experiments are shown below. As we can see, the trad
 |8    | 4766         | 6468             | 5965       |  987              |
 |9    | 4689         | 6856             | 5729       |  776              |
 |10   | 4738         | 6530             | 5799       |  880              |
+|-----|--------------|------------------|------------|-------------------|
+| Avg | 4719	     | 6599	            | 5867	     | 917               |
 
+
+![summing results as graph](summing_results_graph.png)
 
 Are there any interesting looping methods I missed in this study?
 
