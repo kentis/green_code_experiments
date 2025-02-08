@@ -11,10 +11,10 @@ In order to study the performance and sustainability of each of these methods to
 we will look use each method to get the sum of a large amount of numbers. To do this we have created a .Net program that
 sums the numbers 1-1000000000 using a foreach loop, a for loop and Linqs Sum() method. Additionally we use Linq's way to parallelize the Summing by calling `AsParallel()` on the collection before summing, just to see what happens.
  
-The results for running the experiments are shown below. As we can see, the traditional for-loop was by far the slowest opting, while Linq's Sum() was about halfway between the for and the foreach loop. Linq's parallel was significantly faster than any of the other methods. However, since the parallel in theory might bee accessing multiple cores, further studies are needed to make any claim in the energy efficiency of this method. Until then it seems likely that the foreach loop is generally a good choice when looping over large lists.
+The results for running the experiments are shown below. As we can see, the traditional for-loop was by far the slowest opting, while Linq's `Sum()` was about halfway between the for and the foreach loop. Linq's parallel was significantly faster than any of the other methods. However, since the parallel in theory might bee accessing multiple cores, further studies are needed to make any claim in the energy efficiency of this method. Until then it seems likely that the foreach loop is generally a good choice when looping over large lists.
 
 
-|Run #|Foreach (ms)  | For (ms)         | Linq Sum   | Linq Paralell Sum |
+|Run #|Foreach (ms)  | For (ms)         | Linq Sum   | Linq Parallel Sum |
 |-----|--------------|------------------|------------|-------------------|
 |1    | 4579         | 6465             | 5858       | 1046              |
 |2    | 4798         | 6575             | 5928       | 1027              |
@@ -34,7 +34,7 @@ The results for running the experiments are shown below. As we can see, the trad
 
 Are there any interesting looping methods I missed in this study?
 
-What are some other common tasks that can be done in several different ways with possible performance and energy use implications?1
+What are some other common tasks that can be done in several different ways with possible performance and energy use implications?
 
 For those interested, the code for this experiment is available in the file [Program.cs](https://raw.githubusercontent.com/kentis/green_code_experiments/refs/heads/main/Experiments/Summing%20numbers%20linq%20vs%20foreach/code/Program.cs?token=GHSAT0AAAAAACZ47PO5AINMDYCBSHYHTGHAZ4UUUUQ), feel free to submit an issue or pull-request if you feel that this experiment should be improved. I re-ran this experiment while varying the order the different ways to parse the dates to ensure consistent results and reduce sources of bias. There did not seem to be any significantly different results from what is presented above.
 
