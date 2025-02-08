@@ -1,6 +1,6 @@
 # C# Summing Up Numbers: Linq vs foreach vs for
 
-Loos are of particular interest when seeking to optimize for sustainability and/or performance. 
+Loops are of particular interest when seeking to optimize for sustainability and/or performance. 
 While it is well known that loops are constructs that allows us to do things many times,
 what is sometimes forgotten is that the thing in the loop tends to be done many times.
 
