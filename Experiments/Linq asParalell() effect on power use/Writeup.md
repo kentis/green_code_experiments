@@ -13,6 +13,7 @@ We include SIMDLinq, which uses the CPU's ability to process the Same Instructio
 
 The real and CPU (user + sys) times for running each of the programs 5 times can be seem in the graphs below. Averages and minimum times are also shown in the tables below that.
 
+
 ![Graphs showing asParalells fastests but taking most CPU time and SIMD second fastest while taking the least CPU time but almost tied with Sum()](./results.png)
 
 
@@ -32,3 +33,8 @@ Minimums:
 |AsParallel().Sum()	|11.37	|30.162	|23.81	|53.972|
 |SimdLinq.Sum()	|26.62|	6.518|	72.55|	21.028|
 |forEach	|51.83	|30.87|	15.238|	46.108|
+
+
+For those interested, the code for this experiment is available in the file [Linq asParalell() effect on power use](https://github.com/kentis/green_code_experiments/tree/main/Experiments/Linq), feel free to submit an issue or pull-request if you feel that this experiment should be improved.
+
+Which performance and/or sustainability question should I pursue next?
