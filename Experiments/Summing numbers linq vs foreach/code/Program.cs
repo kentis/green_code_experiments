@@ -17,16 +17,20 @@ namespace Program {
             forSum(numbers);
             linqSum(numbers);
             linqParallelSum(numbers);
-            
+            linqForEach(numbers);
+            linqForAllParalell(numbers);
+            Console.WriteLine($"---------------Runs---------------");
             // Real tests
             foreach (var i in Enumerable.Range(1, 10))
             {
-                Console.WriteLine($"---------------Run {i}---------------");
+                
                 var foreachSumTime = foreachSum(numbers);
                 var forSumTime = forSum(numbers);
                 var linqSumTime = linqSum(numbers);
                 var linqParallelSumTime = linqParallelSum(numbers);
-                Console.WriteLine($"| {foreachSumTime} | {forSumTime} | {linqSumTime} |  {linqParallelSumTime} |");
+                var linqForEachTime = linqForEach(numbers);
+                var linqForAllParalellTime = linqForAllParalell(numbers);
+                Console.WriteLine($"| {foreachSumTime} | {forSumTime} | {linqSumTime} |  {linqParallelSumTime} | {linqForEachTime} | {linqForAllParalellTime} |");
             }
         }
 
@@ -63,7 +67,29 @@ namespace Program {
         {
             var sw = new Stopwatch();
             sw.Start();
-            var sum = numbers.Sum(x => x);
+            var sum = numbers.Sum();
+            sw.Stop();
+            //Console.WriteLine($"Linq Sum: {sum}, Elapsed: {sw.ElapsedMilliseconds}ms");
+            return sw.ElapsedMilliseconds;
+        }
+
+        public static long linqForEach(List<long> numbers)
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+            var sum = 0L;
+            numbers.ForEach(x => sum += x);
+            sw.Stop();
+            //Console.WriteLine($"linqForEach Sum: {sum}, Elapsed: {sw.ElapsedMilliseconds}ms");
+            return sw.ElapsedMilliseconds;
+        }
+
+        public static long linqForAllParalell(List<long> numbers)
+        {
+            var sw = new Stopwatch();
+            sw.Start();
+            var sum = 0L;
+            numbers.AsParallel().ForAll(x => sum += x);
             sw.Stop();
             //Console.WriteLine($"Linq Sum: {sum}, Elapsed: {sw.ElapsedMilliseconds}ms");
             return sw.ElapsedMilliseconds;
