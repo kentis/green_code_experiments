@@ -9,7 +9,7 @@ to see if there are any significant differences between different ecosystems or 
 
 ## Method
 
-This study considers three popular platforms/ecosystems .Net, Python and Java. Furthermore, two popular ways to parse Json is considered for each. For Dotnet the built in `System.Text.Json` and `Newtonsoft.Json` are chosen. For Python, the `json` and `orjson`packages are studied. Finally, for Java `Jackson` and `Gson` parsers are included. Each parser is selected based on fast non-rigorous google searches, but still seem to be fairly popular choices. All parsees are tested by quite naive implementations. The code for all the experiments as well as all data can be found [here](https://github.com/kentis/)
+This study considers three popular platforms/ecosystems .Net, Python and Java. Furthermore, two popular ways to parse Json is considered for each. For Dotnet the built in `System.Text.Json` and `Newtonsoft.Json` are chosen. For Python, the `json` and `orjson`packages are studied. Finally, for Java `Jackson` and `Gson` parsers are included. Each parser is selected based on fast non-rigorous google searches, but still seem to be fairly popular choices. All parsees are tested by quite naive implementations. The code for all the experiments as well as all data can be found [here](https://github.com/kentis/green_code_experiments/blob/main/Experiments/Battle%20of%20Json%20parsers/code)
 
 Each json parser is used to parse the same 3.3MB Json document 10 times. This is probably not representative for most Json documents, however, using a large documents makes measuring easier. The programs report the time spent in the loop. Additionally, each method was measured using the builtin `time` command to see the actual CPU use of the program.
 
