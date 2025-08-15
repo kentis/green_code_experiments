@@ -15,8 +15,8 @@ Each json parser is used to parse the same 3.3MB Json document 10 times. This is
 
 ## Results
 
-| Platform | Parser           | Reported time | `time` User | `time` System|
-|----------|––––––––----------|–––––––––––––––|–––––––––––––|––––––––––––––|
+| Platform | Parser           | Reported time | `time` User | `time` System |
+| -------- | ---------------- | ------------- | ----------- | ------------- |
 | Dotnet   | Newtonsoft.Json  |  1.7s         | 2.8s        |  0.3s        |
 | Dotnet   | System.Text.Json |  0.3s         | 1.1s        |  0.2s        |
 | Python   | json (std lib)   |  0.3s         | 0.3s        |  0.0s        |
