@@ -1,0 +1,16 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:node": "node index.js",
+    "test:deno": "deno run --allow-read index.js",
+    "test:bun": "bun index.js",
+    "test": "npm run test:node && npm run test:deno && npm run test:bun"
+  },
+  "type": "module",
+  "dependencies": {
+    "bun": "^1.2.20",
+    "deno": "^2.4.4"
+  }
+}
