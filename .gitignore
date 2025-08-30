@@ -25,3 +25,6 @@ replay_pid*
 
 
 **/.DS_STORE
+
+# Ignore node_modules
+node_modules/
